@@ -12,12 +12,11 @@ class Animal {
         this.type = type;
     }
 
-    getData() {
+    otherData() {
         axios
             .get('./animal.json')
             .then(response => {
                 // response.data
-                // console.log(this.type);
 
                 if(dog.type === 'Dog') {
                     this.type = response.data.dog;
@@ -57,7 +56,7 @@ class Cat extends Animal {
 let dog = new Dog();
 let cat = new Cat();
 
-dog.getData();
-cat.getData();
+dog.otherData();
+cat.otherData();
 
 

@@ -4,20 +4,24 @@ breed.innerHTML = 'Dog breed:';
 
 class Animal {
 
-    constructor(self = {}) {
-        this.self = {
-            dog: {},
-            cat: {}
-        };
+    constructor(self) {
+        this.self = self;
     }
 
     getData() {
         axios
             .get('./animal.json')
             .then(respons => {
-                // console.log(respons.data.dog);
-                this.self = respons.data;  
-                console.log(this.self)
+                // this.self = respons.data;
+                // console.log(this.self);
+
+                if(dog.self === 'Dog') {
+                    this.self = respons.data.dog;
+                    console.log(this.self);
+                } else if (cat.self === 'Cat') {
+                    this.self = respons.data.cat;
+                    console.log(this.self);
+                }
             })
     }
 
@@ -25,22 +29,22 @@ class Animal {
 }
 
 class Dog extends Animal {
-    constructor(self = {}) {
+    constructor(self) {
         super(self)
     }
+
 }
 
 class Cat extends Animal {
-    constructor(self = {}) {
+    constructor(self) {
         super(self)
     }
 }
 
-let dog = new Dog();
+let dog = new Dog('Dog');
+let cat = new Cat('Cat');
 
-let cat = new Cat();
+dog.getData();
+cat.getData();
 
-let animal = new Animal();
-
-animal.getData();
 

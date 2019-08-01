@@ -1,0 +1,16 @@
+{
+    "dog": {
+        "breed": "Siberian Husky Dog",
+        "weight": "35 to 60 pounds",
+        "eye_color": "Blue, Green",
+        "life_span": "12 to 15 years'",
+        "voice": ["Gav", "Grrr"]
+    },
+    "cat": {
+        "breed": "British Shorthair Cat",
+        "weight": "7 to 17 pounds",
+        "eye_color": "Blue, Copper, Gold, Odd-eyed",
+        "life_span": "12 to 17 years",
+        "voice": ["May", "Mrrr"]
+    }
+}

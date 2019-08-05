@@ -5,25 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3>Hello</h3>
-                <p><b>Dog breed:</b> <span class="breed"></span></p>
-                <p><b>Dog weight:</b> <span class="weight"></span></p>
-                <p><b>Eye color:</b> <span class="eye_color"></span></p>
-                <p><b>Life span:</b> <span class="life_span"></span></p>
-                <p><b>Voice:</b> <span class="voice"></span></p>
+                <h3 class="text-center title">My Home Animals</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <h3>Create your own Animal</h3>
+                <select name="" id="selectItem">
+                    <option value="choose Animal">Choose Animal</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                </select>
+                <input type="text" name="name" placeholder="Name">
+                <button type="button">Create</button>
+            </div>
+
+            <div class="col-xs-6">
+                <h3>My Animals</h3>
             </div>
         </div>
     </div>
 
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/app.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,8 @@
+@import url(./bootstrap.min.css);
+.title {
+  text-transform: uppercase;
+  border: 1px solid #bec3c9;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Arial';
+  color: #2062ac; }

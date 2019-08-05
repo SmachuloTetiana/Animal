@@ -6,3 +6,25 @@
   border-radius: 5px;
   font-family: 'Arial';
   color: #2062ac; }
+
+.animal__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .animal__image img {
+    width: auto;
+    height: 100%; }
+
+.form-control, .animal {
+  margin: 15px 0; }
+
+.animal {
+  border-bottom: 1px solid #bec3c9;
+  display: flex;
+  flex-direction: row;
+  padding: 15px 0; }

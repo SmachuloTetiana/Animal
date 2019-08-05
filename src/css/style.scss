@@ -15,3 +15,31 @@ body {
     font-family: 'Arial';
     color: $main-color;
 }
+
+.animal__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.form-control {
+    margin: 15px 0;
+}
+
+.animal {
+    border-bottom: 1px solid #bec3c9;
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
+    @extend .form-control;
+}

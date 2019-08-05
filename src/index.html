@@ -19,17 +19,27 @@
         <div class="row">
             <div class="col-xs-6">
                 <h3>Create your own Animal</h3>
-                <select name="" id="selectItem">
+                <select name="" class="form-control" id="selectItem">
                     <option value="choose Animal">Choose Animal</option>
                     <option value="dog">Dog</option>
                     <option value="cat">Cat</option>
                 </select>
-                <input type="text" name="name" placeholder="Name">
-                <button type="button">Create</button>
+                <input type="text" id="name" class="form-control" value="" placeholder="Name">
+                <button id="create" class="btn btn-primary">Create</button>
             </div>
 
             <div class="col-xs-6">
                 <h3>My Animals</h3>
+                <div class="animal">
+                    <div class="animal__image">
+                        <img src="" class="image" alt="Image">
+                    </div>
+                    <div class="animal__content">
+                        <span class="animal__name"></span>
+                        <p class="animal__breed"></p>
+                        <span class="animal__voice"></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

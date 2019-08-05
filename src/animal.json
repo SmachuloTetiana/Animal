@@ -4,13 +4,15 @@
         "weight": "35 to 60 pounds",
         "eye_color": "Blue, Green",
         "life_span": "12 to 15 years",
-        "voice": ["Gav", "Grrr"]
+        "voice": ["Gav", "Grrr"],
+        "images": ["./img/husky-dog-1.jpg", "./img/husky-dog-2.jpg"]
     },
     "cat": {
         "breed": "British Shorthair Cat",
         "weight": "7 to 17 pounds",
         "eye_color": "Blue, Copper, Gold, Odd-eyed",
         "life_span": "12 to 17 years",
-        "voice": ["May", "Mrrr"]
+        "voice": ["May", "Mrrr"],
+        "images": ["./img/british-shorthair-cat-1.jpg", "./img/british-shorthair-cat-2.jpg"]
     }
 }

@@ -8,6 +8,32 @@
         animalBreed = document.getElementsByClassName("animal__breed")[0],
         animalVoice = document.getElementsByClassName("animal__voice")[0];
 
+    class AnimalApp {
+        constructor() {
+            const animals = {
+                dog: Dog,
+                cat: Cat
+            }; 
+
+            this.initEventListeners(animals);
+        }
+
+        initEventListeners(animals) {
+            btnCreate.addEventListener('click', function() {
+                const selectVal = selectItem.value;
+                const name = nameAnimal.value;
+                const animal = new animals[selectVal]({ name });
+
+                animalImage.src = animal.data.images[Math.floor(Math.random()*animal.data.images.length)];  
+                animalName.innerHTML = name;
+                animalBreed.innerHTML = animal.data.breed;
+                animalVoice.innerHTML = animal.data.voice[Math.floor(Math.random()*animal.data.voice.length)]
+
+            });
+        }
+    }
+    
+
     class Animal {
         constructor(type, additionalData) {
             Object.assign(this, additionalData);
@@ -18,48 +44,23 @@
         get voice() {
             return `${this.name} says ${this.data.voice[Math.floor(Math.random()*this.data.voice.length)]}`;
         } 
-
-        create() {  
-            btnCreate.addEventListener('click', function() {
-                var selectVal = selectItem.value;
-                var inputVal = nameAnimal.value;
-  
-                this.data = animalData.data[selectVal];
-                if(this.data) {
-                    animalImage.src = this.data.images[Math.floor(Math.random()*this.data.images.length)];  
-                    animalName.innerHTML = inputVal;
-                    animalBreed.innerHTML = this.data.breed;
-                    animalVoice.innerHTML = this.data.voice[Math.floor(Math.random()*this.data.voice.length)]
-                }
-
-            })   
-                  
-        }
     }
     
     class Dog extends Animal {
         constructor(additionalData) {
             const type = 'dog';
-            super(type, additionalData)
+            super(type, additionalData);
         }
     }
     
     class Cat extends Animal {
         constructor(additionalData) {
             const type = 'cat';
-            super(type, additionalData)
+            super(type, additionalData);
         }
     }
-    
-    let dog = new Dog({ name: 'Alf', color: 'brown' });
-    let cat = new Cat({ name: 'Kotik', color: 'black' });
-    // const animal = new Animal();
-    dog.create();
 
-    console.log(dog.voice);
-    console.log(cat.voice);
-
-
+    new AnimalApp();
 })();
 
 
